@@ -3,7 +3,12 @@
 {% block content %}
 <section class="about">
   <article>
-    <h2>History of Parkafreebia II</h2>
+    {% if title %}
+    <title>Culture Master - {{ title }}</title>
+    {% else %}
+    <title>Culture Master </title>
+    {% endif %}
+
     <p></p>
 
     <a id="BackButton"></a>
