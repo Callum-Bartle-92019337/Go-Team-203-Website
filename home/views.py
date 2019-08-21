@@ -36,14 +36,6 @@ def contact(request):
     }
     return render(request, 'home/contactUs.html', meta)
 
-
-def contribute(request):
-    meta = {
-        'title': 'Contribute',
-        'description': companyName +' contributers page where you go to get the app development kit'
-    }
-    return render(request, 'home/contribute.html', meta)
-
 def privacyPolicy(request):
     meta = {
         'title': 'Privacy Policy',
