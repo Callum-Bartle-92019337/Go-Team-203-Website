@@ -10,10 +10,13 @@ from .forms import SignUpForm, ReviewNewForm
 
 log = logging.getLogger(__name__)
 
+companyName = "Culture Master";
+
 def home(request):
     meta = {
         'title': 'Home',
-        'description': 'Parkafreebia II home page where you can see a quick rundown of the page and its features'
+            'companyName': companyName,
+        'description': companyName +' home page where you can see a quick rundown of the page and its features'
     }
     return render(request, 'home/home.html', meta)
 
@@ -21,7 +24,7 @@ def home(request):
 def history(request):
     meta = {
         'title': 'History',
-        'description': 'Parkafreebia II a short history of the app and the prosess that created it'
+        'description': companyName +' a short history of the app and the prosess that created it'
     }
     return render(request, 'home/aboutHistory.html', meta)
 
@@ -29,7 +32,7 @@ def history(request):
 def contact(request):
     meta = {
         'title': 'Contact Us',
-        'description': 'Parkafreebia II contact page, the form used to submit reviews and bug reports'
+        'description': companyName +' contact page, the form used to submit reviews and bug reports'
     }
     return render(request, 'home/contactUs.html', meta)
 
@@ -37,14 +40,14 @@ def contact(request):
 def contribute(request):
     meta = {
         'title': 'Contribute',
-        'description': 'Parkafreebia II contributers page where you go to get the app development kit'
+        'description': companyName +' contributers page where you go to get the app development kit'
     }
     return render(request, 'home/contribute.html', meta)
 
 def privacyPolicy(request):
     meta = {
         'title': 'Privacy Policy',
-        'description': 'Parkafreebia II privacy policy page updated 21st august 2018'
+        'description': companyName +' privacy policy page updated 21st august 2018'
     }
     return render(request, 'home/privacyPolicy.html', meta)
 
@@ -52,7 +55,7 @@ def privacyPolicy(request):
 def termsOfService(request):
     meta = {
         'title': 'Terms of Service',
-        'description': 'Parkafreebia II terms of service page updated august 21st 2018'
+        'description': companyName +' terms of service page updated august 21st 2018'
     }
     return render(request, 'home/termsOfService.html', meta)
 
@@ -60,7 +63,7 @@ def termsOfService(request):
 def theMaking(request):
     meta = {
         'title': 'The Making',
-        'description': 'Parkafreebia II information on the making of the app and how it was coded'
+        'description': companyName +' information on the making of the app and how it was coded'
     }
     return render(request, 'home/theMaking.html', meta)
 
