@@ -3,8 +3,13 @@
 {% block content %}
 <section class="about">
   <article>
-    <h2>Culture Master behind the sences</h2>
-    <p>how we come to be</p>
+    {% if title %}
+    <title>Culture Master - {{ title }}</title>
+    {% else %}
+    <title>Culture Master </title>
+    {% endif %}
+
+    <p>testing now bro</p>
 
     <a id="BackButton"></a>
   </article>
