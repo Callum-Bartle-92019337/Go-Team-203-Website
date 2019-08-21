@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="about">
+  <article>
+    <a id="BackButton"></a>
+    <a id="lights"></a>
+    <h2 class="breakBefore">List of Reviews</h2>
+    <div class="map">
+      <div id="mapp">
+        {% if review_list %}
+        <ul>
+
+          {% for i in review_list %}
+          <div class="tourname">
+            <a href="{% url 'review_detail' i.id %}">
+              <p><strong>{{ i.title|capfirst }}</strong> - <strong>{{i.poster}}</strong></p>
+            </a>
+          </div>
+          {% endfor %}
+          <br>
+        </ul>
+        {% else %}
+        <p>There are no reviews to display.</p>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock %}

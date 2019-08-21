@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="atmo">
+  <article>
+    <h2>Two Weeks In Tokyo</h2>
+    <p>Here have a review that is linked</p>
+    <a class="btn" title="Launching" href="{% url 'reviews_list_strd' %}">Learn more</a>
+  </article>
+</section>
+
+<section class="Phase">
+
+  <aside>
+    <div class="content">
+      <a href="#Image1">
+        <img class="imgg" alt="Phase 2" src="{% static 'images/tokyo.jpg' %}" /></a>
+      <div class="imageOverlay" id="Image1">
+        <a href="##">
+          <img src="{% static 'images/LargeMapParks.png' %}" /></a>
+      </div>
+      <h4>Places to stay in Okinawa</h4>
+      <p>Here have a review that is linked</p>
+
+    </div>
+  </aside>
+
+  <aside>
+    <div class="content">
+      <a href="#Image2">
+        <img class="imgg" alt="Phase 3" src="{% static 'images/tokyo.jpg' %}"></a>
+      <div class="imageOverlay" id="Image2">
+        <a href="##">
+          <img src="{% static 'images/LargeMapLocation.png' %}" /></a>
+      </div>
+      <h4>Yummy Food From Osaka</h4>
+      <p>Here have a review that is linked</p>
+
+    </div>
+  </aside>
+
+  <blockquote>
+    <p class="quote">Looking for a park? Why not Parkafreebia!</p>
+    <p class="credit"><strong>Annamarie Smith</strong><br><em>Student</em></p>
+  </blockquote>
+
+</section>
+{% endblock %}

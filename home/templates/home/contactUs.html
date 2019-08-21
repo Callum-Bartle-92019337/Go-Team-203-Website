@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="about">
+  <article>
+    <h2>Contact Us</h2>
+    <form action="javascript:success()" method="post" name="contactform">
+      <div class="check">
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" name="firstname" size="30" />
+        <span id="firstname_msg"></span>
+      </div>
+      <div class="check">
+        <label for="familyname">Family Name</label>
+        <input id="familyname" type="text" name="familyname" size="30">
+        <span id="familyname_msg"></span>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" size="30" />
+        <span id="email_msg"></span>
+      </div>
+      <div>
+        <span class="breakAfter">Sex</span>
+        <input id="sex_male" type="radio" value="male" name="sex" />
+        <label for="sex_male">Male</label>
+        <input id="sex_female" type="radio" value="female" name="sex" />
+        <label for="sex_female">Female</label>
+        <span id="sex_msg"></span>
+      </div>
+      <div id="interests">
+        <span class="breakAfter">How did you hear about us</span>
+        <div class="check"><input id="interests_1" type="checkbox" value="google" name="interests[]" />
+          <label for="interests_html">Google</label></div>
+        <div class="check"><input id="interests_2" type="checkbox" value="os" name="interests[]" />
+          <label for="interests_js">Other Search</label></div>
+        <div class="check"><input id="interests_3" type="checkbox" value="facebook" name="interests[]" />
+          <label for="interests_regexp">Facebook</label></div>
+        <div class="check"><input id="interests_4" type="checkbox" name="interests[]" value="wem" />
+          <label for="interests_css">Word and mouth</label></div>
+        <div class="check"><input id="interests_5" type="checkbox" name="interests[]" value="appStore" />
+          <label for="interests_php">App store</label></div>
+        <div class="check"><input id="interests_6" type="checkbox" name="interests[]" value="other" />
+          <label for="interests_py">Other</label></div>
+        <span id="interests_msg"></span>
+      </div>
+      <div>
+        <label for="region">Region</label>
+        <select id="region" name="region">
+          <optgroup label="New Zealand">
+            <option value="-1">--Choose--</option>
+            <option value="bp">Bay of Plenty</option>
+            <option value="hb">Hawke's Bay</option>
+            <option value="mw">Manawatu-Wanganui</option>
+            <option value="nl">Northland</option>
+            <option value="tr">Taranaki</option>
+            <option value="wi">Waikato</option>
+            <option value="we">Wellington</option>
+            <option value="ua">Unitary authorities</option>
+            <option value="cn">Canterbury</option>
+            <option value="ot">Otago</option>
+            <option value="sl">Southland</option>
+            <option value="wc">West Coast</option>
+          </optgroup>
+        </select>
+        <span id="region_msg"></span>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" type="message" name="message" rows="6" cols="40"></textarea>
+      </div>
+      <div>
+        <div class="check">
+          <input id="tandcagree" name="tandcagree" type="checkbox" value="agree" />
+          <label for="tandcagree">I agree to the <a title="Terms of Service" target="_blank" href="{% url 'termsOfService' %}">Terms of Service</a></label></div>
+        <span id="tandcagree_msg"></span>
+      </div>
+      <div>
+        <a id="BackButton"></a>
+        <button class="btn" type="submit" name="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </article>
+</section>
+<script type="text/javascript" src="{% static 'js/formv.js' %}"></script>
+{% endblock %}

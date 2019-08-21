@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if title %}
+    <title>Culture Master - {{ title }}</title>
+    {% else %}
+    <title>Culture Master </title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/css.css' %}">
+    <script type="text/javascript" src="{% static 'js/globalFunctions.js' %}" defer></script>
+    {% if description %}
+    <meta name="description" content="{{ description }}" />
+    {% else %}
+    <meta name="description" content="Parkafreebia II Where you go for free parking" />
+    {% endif %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+  </head>
+
+  <body>
+    <div id="page">
+
+      <header>
+        <div><a class="logo" title="Culture Master" href="{% url 'home' %}"><span>Culture Master</span></a>
+          <div class="hero">
+            <h1>Culture Master</h1><a id="titleButton" title="Get Started" href="{% url 'reviews_list_strd' %}">Get Started<span>Today</span></a>
+          </div>
+        </div>
+      </header>
+        <section class="main">
+
+          <aside>
+            <div class="content trending">
+              <h3><a href="{% url 'contact' %}">What To Do</a></h3>
+              <p>Do Stuff</p>
+
+            </div>
+          </aside>
+
+          <aside>
+            <div class="content find">
+              <h3><a href="{% url 'contribute' %}">Where to Eat</a></h3>
+              <p>Eat Stuff</p>
+
+            </div>
+          </aside>
+
+          <aside>
+            <div class="content tools">
+              <h3><a href="{% url 'theMaking' %}">Where to Stay</a></h3>
+              <p>Sleep Stuff</p>
+
+            </div>
+          </aside>
+
+        </section>
+
+      {% block content %}
+      {% endblock %}
+
+      <nav id="Navi">
+        <ul>
+          <li><a title="Home" href="{% url 'home' %}">Home</a></li>
+          <li><a title="Reviews" href="{% url 'reviews_list_strd' %}" aria-haspopup="true">Reviews</a>
+            <ul>
+              <li><a title="View all" href="{% url 'reviews_list_strd' %}">View all</a></li>
+              <li><a title="Post New" href="{% url 'review_new' %}">Post New</a></li>
+              {% if user.is_authenticated %}
+                 <li><a title="Your Reviews" href="{% url 'reviews_list_auth' %}">Your Reviews</a></li>
+              {% endif %}
+
+            </ul>
+          </li>
+          <li><a title="About Us" href="{% url 'history' %}" aria-haspopup="true">About Us</a>
+            <ul>
+              <li><a title="History" href="{% url 'history' %}">History</a></li>
+              <li><a title="The making" href="{% url 'theMaking' %}">The making</a></li>
+            </ul>
+          </li>
+          <li><a title="Contact Us" href="{% url 'contact' %}">Contact Us</a></li>
+          {% if user.is_authenticated %}
+             <li>
+             <a href="{% url 'logged_out_user'%}?next={{request.path}}">User: {{ user.get_username }} - Logout</a></li>
+           {% else %}
+             <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+           {% endif %}
+        </ul>
+      </nav>
+
+      <footer>
+        <div>
+          &copy; Culture Master
+          <div class="content">
+            <a title="Privacy Policy" href="{% url 'privacyPolicy' %}">Privacy Policy</a>
+            <a title="Terms of Service" href="{% url 'termsOfService' %}">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+
+</html>

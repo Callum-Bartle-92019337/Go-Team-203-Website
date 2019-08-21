@@ -1,0 +1,22 @@
+workon djProject1
+cd C:\Users\user\OneDrive\Documents\School Stuff\IT6036\DjangoProjects\p1
+
+
+deactivate
+exit
+
+lsvirtualenv
+mkvirtualenv djProject3
+workon djProject1
+pip install django==2.0
+pip install -r requirements.txt
+django-admin.py version
+cd C:\Users\user\OneDrive\Documents\School Stuff\IT6036\DjangoProjects\p1
+django-admin.py startproject p1
+
+python manage.py runserver
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
