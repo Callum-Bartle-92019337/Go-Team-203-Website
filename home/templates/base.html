@@ -24,7 +24,7 @@
     <div id="page">
 
       <header>
-        <div><a class="logo" title="Culture Master" href="{% url 'home' %}"><span>Culture Master</span></a>
+        <div>
           <div class="hero">
             <h1>Culture Master</h1><a id="titleButton" title="Get Started" href="{% url 'reviews_list_strd' %}">Get Started<span>Today</span></a>
           </div>
@@ -62,6 +62,7 @@
       {% endblock %}
 
       <nav id="Navi">
+        <a class="logo" title="Culture Master" href="{% url 'home' %}"><span>Culture Master</span></a>
         <ul>
           <li><a title="Home" href="{% url 'home' %}">Home</a></li>
           <li><a title="Reviews" href="{% url 'reviews_list_strd' %}" aria-haspopup="true">Reviews</a>

@@ -100,17 +100,17 @@ header {
   position: relative;
 }
 
-header a.logo {
-  z-index: 1;
-  position: absolute;
-  display: block;
-  width: 160px;
-  height: 50px;
-  background: url(../images/Logo1.png) no-repeat 0 0;
-  background-size: contain;
-  top: 15px;
-  left: 20px;
-}
+/*header a.logo {*/
+/*  z-index: 1;*/
+/*  position: fixed;*/
+/*  display: block;*/
+/*  width: 160px;*/
+/*  height: 50px;*/
+/*  background: url(../images/Logo1.png) no-repeat 0 0;*/
+/*  background-size: contain;*/
+/*  top: 15px;*/
+/*  left: 20px;*/
+/*}*/
 
 header a.logo span {
   display: none;
@@ -340,6 +340,21 @@ nav {
   max-width: 1200px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+nav a.logo {
+  z-index: 1;
+  position: fixed;
+  display: block;
+  width: 160px;
+  height: 50px;
+  background: url(../images/Logo1.png) no-repeat 0 0;
+  background-size: contain;
+  top: 15px;
+  left: 20px;
+}
+nav a.logo span {
+  display: none;
 }
 
 nav::after {

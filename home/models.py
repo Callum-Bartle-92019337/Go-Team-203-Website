@@ -23,8 +23,9 @@ class Review(models.Model):
     content = models.CharField(max_length=4096)
     poster = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     posted = models.CharField(max_length=150, default=timezone.now)
+    image = models.ImageField(upload_to='review_Images/')
 
-    readonly_fields=('posted', 'poster',)
+    readonly_fields=('posted', 'poster')
 
     def __str__(self):
         return self.title + ' - ' + self.poster.username

@@ -19,7 +19,7 @@ class SignUpForm(UserCreationForm):
 class ReviewNewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['title', 'content',]
+        fields = ['title', 'content','image',]
         widgets = {
             'content': Textarea(attrs={'cols': 80, 'rows': 20}),
         }

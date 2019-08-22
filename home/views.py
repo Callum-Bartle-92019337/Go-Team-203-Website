@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Review
 from .forms import SignUpForm, ReviewNewForm
+from django.core.files.storage import FileSystemStorage
 
 log = logging.getLogger(__name__)
 
