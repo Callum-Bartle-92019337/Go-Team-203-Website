@@ -52,8 +52,8 @@ For our project website
 - $ git clone https://github.com/Callum-Bartle-92019337/Go-Team-203-Website.git 
 
 ### Pull
-```$ git fetch --all```
-```$ git pull origin master```
+- ```$ git fetch --all```
+- ```$ git pull origin master```
 
 ### Push
 - $ git add .
