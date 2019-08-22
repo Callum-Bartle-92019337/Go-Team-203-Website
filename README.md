@@ -2,16 +2,16 @@
 For our project website
 
 # Windows Install
-https://www.python.org/downloads/
-https://gitforwindows.org/
+- https://www.python.org/downloads/
+- https://gitforwindows.org/
 
 ### Restart computer
 
 ### Install server run 
-Start_Install_Django_Server.bat
+- Start_Install_Django_Server.bat
 
 ### Run server
-Start_Django_Server.bat
+- Start_Django_Server.bat
 
 
 
