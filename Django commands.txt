@@ -6,7 +6,11 @@ deactivate
 exit
 
 lsvirtualenv
+
+virtualenv djProject3
+or
 mkvirtualenv djProject3
+
 workon djProject1
 pip install django==2.0
 pip install -r requirements.txt

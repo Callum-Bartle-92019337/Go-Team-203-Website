@@ -10,7 +10,9 @@ git add .
 git commit -m "%NAME%"
 git push
 
-pause
+echo.
+echo Press any key to exit . . .
+pause >nul
 
 :END
 endlocal

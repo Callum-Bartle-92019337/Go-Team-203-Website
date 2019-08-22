@@ -7,7 +7,10 @@ IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
 git fetch --all
 git pull origin master
-pause
+
+echo.
+echo Press any key to exit . . .
+pause >nul
 
 :END
 endlocal
