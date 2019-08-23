@@ -1,14 +1,5 @@
 @echo off
 
-setlocal
-SET /P AREYOUSURE1=Install virtual environments (Y/[N])?
-IF /I "%AREYOUSURE1%" NEQ "Y" GOTO VIRTEN
-
-pip install virtualenv 
-mkvirtualenv djProject3
-:VIRTEN
-workon djProject3
-
 SET /P AREYOUSURE1=Install requirements (Y/[N])?
 IF /I "%AREYOUSURE1%" NEQ "Y" GOTO REQS
 
@@ -36,4 +27,3 @@ echo.
 echo.
 echo Press any key to exit . . .
 pause >nul
-endlocal
