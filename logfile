@@ -5,3 +5,8 @@
 [26/Aug/2019 10:37:20] WARNING [home.models:16] login failed for: DRatliff
 [26/Aug/2019 10:44:48] WARNING [home.views:67] admin Logged out
 [26/Aug/2019 10:45:14] WARNING [home.views:67]  Logged out
+[26/Aug/2019 10:46:03] WARNING [home.views:67]  Logged out
+[26/Aug/2019 11:00:33] WARNING [home.views:67] admin Logged out
+[26/Aug/2019 11:09:57] WARNING [home.models:16] login failed for: admin1
+[26/Aug/2019 11:19:14] WARNING [home.views:67] admin Logged out
+[26/Aug/2019 11:28:05] WARNING [home.views:67] Testing Logged out

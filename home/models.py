@@ -19,7 +19,14 @@ def user_login_failed_callback(sender, credentials, **kwargs):
 
 class Review(models.Model):
 
+    TYPE_CHOICES =(
+        ('Food' ,'Food'),
+        ('Activities', 'Activities'),
+        ('Accommodation','Accommodation')
+    )
+
     title = models.CharField(max_length=50)
+    type = models.CharField(choices=TYPE_CHOICES, max_length=30, default=2)
     content = models.CharField(max_length=4096)
     poster = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     posted = models.CharField(max_length=150, default=timezone.now)

@@ -33,7 +33,7 @@ function init() {
   FIRSTNAME_ERROR = "First name should be at least 2 letters in length";
   FNAME_ERROR = "Family name should be at least 2 letters in length";
   EMAIL_ERROR = "Must be a valid email address, or left blank";
-  GENDER_ERROR = "Please select either male or female.";
+  GENDER_ERROR = "Please select one.";
   INTERESTS_ERROR = "Please select at least one source";
   REGION_ERROR = "You must choose a region.";
   TOS_ERROR = "You must agree to the terms and conditions to continue.";
@@ -109,7 +109,7 @@ function checkForm() {
       interestcount++;
     }
   }
-  interestcount < 2
+  interestcount < 1
     ? errorPass( INTERESTS_MSG, INTERESTS_ERROR )
     : errorReset( INTERESTS_MSG );
 

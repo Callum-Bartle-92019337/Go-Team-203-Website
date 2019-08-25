@@ -20,10 +20,10 @@
             {% endfor %}
           </p>
         {% endfor %}
-        <button type="submit">Post Review</button>
+        <button class="btn" type="submit">Post Review</button>
       </form>
     {% else %}
-    <p><a href="{% url 'login'%}?next={{request.path}}">Login</a> to post a review</p>
+    <p><a class="btn" href="{% url 'login'%}?next={{request.path}}">Login</a> to post a review</p>
     {% endif %}
   </article>
 </section>

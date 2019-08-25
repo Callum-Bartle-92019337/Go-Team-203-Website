@@ -59,7 +59,7 @@ a:visited {
   color: #ffe5c1
 }
 
-.btn, #titleButton {
+.btn, #titleButton, #id_image {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   text-decoration: none;
@@ -67,13 +67,10 @@ a:visited {
   border: 1px solid #ffe5c1;
   padding: 4px 15px;
   transition: background-color .5s;
-}
-
-button {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.btn {
+button {
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -173,10 +170,10 @@ section.main aside h3 a {
   text-decoration: none;
 }
 
-section.main aside h3 a:hover {
-  color: #ffe5c1;
-  text-decoration: underline;
-}
+/*section.main aside h3 a:hover {*/
+/*  color: #ffe5c1;*/
+/*  text-decoration: underline;*/
+/*}*/
 
 section.main aside .content.trending {
   background-image: url(../images/icon_star.svg);
@@ -487,6 +484,12 @@ form div {
 label, .label {
   display: inline-block;
   width: 100px;
+}
+
+
+input, select, textarea {
+  color: #000000;
+  background-color: #EBD8B7;
 }
 
 .error {
