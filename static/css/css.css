@@ -96,7 +96,7 @@ header div.hero a.btn {
 
 header {
   height: 430px;
-  background: #1F1F1F url(../images/jap.background.jpg) no-repeat center bottom;
+  background: #1F1F1F url(../images/banner_1200.jpg) no-repeat center bottom;
   position: relative;
 }
 
@@ -544,7 +544,7 @@ label[for=tandcagree] {
   /* Header */
   header {
     height: 300px;
-    background-image: url(../images/jap.background_825.jpg);
+    background-image: url(../images/banner_825.jpg);
   }
   header div.hero {
     top: 132px;
@@ -631,7 +631,7 @@ label[for=tandcagree] {
   /* Header */
   header {
     height: 160px;
-    background-image: url(../images/jap.background_625.jpg);
+    background-image: url(../images/banner_625.jpg);
     background-position: left top;
   }
   /*header a.logo {*/
@@ -768,13 +768,17 @@ label[for=tandcagree] {
   /* Header */
   header {
     height: 110px;
-    background-image: url(../images/jap.background_425.jpg);
+    background-image: url(../images/banner_425.jpg);
   }
-  header a.logo {
-    height: 36px;
-    background: rgba(109, 82, 54, 0.66) url(../images/logoSmall.png) no-repeat center center;
-    background-size: 200px 36px;
-  }
+  /*nav{*/
+
+  /*}*/
+  /*nav a.logo {*/
+  /*  height: 36px;*/
+  /*  background: rgba(109, 82, 54, 0.66) url(../images/logoSmall.png) no-repeat center center;*/
+  /*  background-size: 200px 36px;*/
+  /*  */
+  /*}*/
   header div.hero {
     width: 100%;
     left: 0;

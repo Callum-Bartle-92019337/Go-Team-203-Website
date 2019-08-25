@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-  <h1>{{review.title|capfirst}} </h1>
-  <br><br>
-  <p>{{ review.content}} </p>
-  <p><b>Poster:</b> {{ review.poster}} </p>
-  <p><b>Posted:</b> {{ review.posted}} </p>
-    <img id="reviewImage" src="{{review.image.url}}">
-  <br>
-</div>
+<section class="about">
+  <article>
+      <h1>{{review.title|capfirst}} </h1>
+    <div class="map">
+      <div id="mapp">
+      <p>{{ review.content}} </p>
+      <p><b>Poster:</b> {{ review.poster}} </p>
+      <p><b>Posted:</b> {{ review.posted}} </p>
+        <img id="reviewImage" src="{{review.image.url}}">
+      </div>
+    </div>
+  </article>
+</section>
 {% endblock %}
