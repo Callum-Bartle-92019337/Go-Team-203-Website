@@ -11,12 +11,15 @@ from django.core.files.storage import FileSystemStorage
 
 log = logging.getLogger(__name__)
 
-companyName = "Culture Master";
+companyName = "Culture Master"
 
 def home(request):
+    queryset1 = Review.objects.order_by('-posted')[:1]
     meta = {
         'title': 'Home',
-            'companyName': companyName,
+        'companyName': companyName,
+        'review_list': queryset1,
+
         'description': companyName +' home page where you can see a quick rundown of the page and its features'
     }
     return render(request, 'home/home.html', meta)

@@ -73,6 +73,11 @@ button {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
 .btn:hover {
   background-color: rgba(255, 51, 31, 0.45);
 }

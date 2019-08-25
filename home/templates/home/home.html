@@ -31,9 +31,16 @@
 
 <section class="atmo">
   <article>
-    <h2>Two Weeks In Tokyo</h2>
-    <p>Here have a review that is linked</p>
-    <a class="btn" title="Launching" href="{% url 'reviews_list_strd' %}">Learn more</a>
+      {% if review_list %}
+          {% for i in review_list %}
+    <h2>{{ i.title|capfirst }}</h2>
+    <p>{{ i.content }}</p>
+    <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
+    <p>Posted by <strong>{{i.poster}}</strong></p>
+          {% endfor %}
+        {% else %}
+        <p>There are no reviews to display.</p>
+        {% endif %}
   </article>
 </section>
 
