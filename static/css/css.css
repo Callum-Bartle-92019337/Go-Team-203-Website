@@ -634,7 +634,16 @@ label[for=tandcagree] {
     background-image: url(../images/jap.background.jpg);
     background-position: left top;
   }
-  header a.logo {
+  /*header a.logo {*/
+  /*  width: 100%;*/
+  /*  height: 56px;*/
+  /*  left: 0;*/
+  /*  top: 0;*/
+  /*  background-color: rgba(109, 82, 54, 0.66);*/
+  /*  background-size: 144px 46px;*/
+  /*  background-position: 20px center;*/
+  /*}*/
+  nav a.logo {
     width: 100%;
     height: 56px;
     left: 0;
@@ -703,7 +712,8 @@ label[for=tandcagree] {
     position: static;
     width: auto;
     padding: 20px 15px;
-    background-color: #6d5236
+    background-color: #6d5236;
+    transform: translateX(0%);
   }
   nav ul, nav ul ul, nav ul ul ul {
     display: block;
