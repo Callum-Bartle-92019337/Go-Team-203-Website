@@ -52,11 +52,11 @@ p {
 }
 
 a {
-  color: #ffd66f
+  color: #ffe5c1
 }
 
 a:visited {
-  color: #e8cd52
+  color: #ffe5c1
 }
 
 .btn, #titleButton {
@@ -74,7 +74,7 @@ button {
 }
 
 .btn:hover {
-  background-color: #ffe5c1;
+  background-color: rgba(255, 51, 31, 0.45);
 }
 
 header div.hero a.btn {
