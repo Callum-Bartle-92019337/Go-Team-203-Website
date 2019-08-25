@@ -544,7 +544,7 @@ label[for=tandcagree] {
   /* Header */
   header {
     height: 300px;
-    background-image: url(../images/jap.background.jpg);
+    background-image: url(../images/jap.background_825.jpg);
   }
   header div.hero {
     top: 132px;
@@ -631,7 +631,7 @@ label[for=tandcagree] {
   /* Header */
   header {
     height: 160px;
-    background-image: url(../images/jap.background.jpg);
+    background-image: url(../images/jap.background_625.jpg);
     background-position: left top;
   }
   /*header a.logo {*/
@@ -768,7 +768,7 @@ label[for=tandcagree] {
   /* Header */
   header {
     height: 110px;
-    background-image: url(../images/jap.background.jpg);
+    background-image: url(../images/jap.background_425.jpg);
   }
   header a.logo {
     height: 36px;
