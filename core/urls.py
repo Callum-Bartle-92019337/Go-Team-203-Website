@@ -7,9 +7,9 @@ from django.views.generic import RedirectView
 from home import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/', include('home.urls')),
     path('', RedirectView.as_view(url='/home/', permanent=True)),
+    path('home/', include('home.urls')),
+    path('admin/', admin.site.urls),
     path('logout/', views.logout, name='logged_out_user'),
     path('reset_request/', views.reset_request, name='password_reset'),
     path('accounts/', include('django.contrib.auth.urls')),

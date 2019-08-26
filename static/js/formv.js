@@ -21,7 +21,7 @@ var valid,
   INTERESTS_MSG,
   REGION_MSG,
   TANDCAGREE_MSG,
-  EMAILREGEXP
+  EMAILREGEXP;
 
 function init() {
   var formsubmit = document.getElementById( "submit" );

@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="about">
-  <article>
-    <a id="BackButton"></a>
-    <h1>{{review.title|capfirst}} </h1>
-    <p>{{ review.content}} </p>
-    <p><b>Poster:</b> {{ review.poster}} </p>
-    <p><b>Posted:</b> {{ review.posted}} </p>
-    <img id="reviewImage" src="{{review.image.url}}">
-  </article>
-</section>
+    <section class="about">
+        <article>
+            <a id="BackButton"></a>
+            <h1>{{ review.title|capfirst }} </h1>
+            <p class="reviewContents">{{ review.content }} </p>
+            <p><b>Poster:</b> {{ review.poster }} </p>
+            <p><b>Posted:</b> {{ review.posted }} </p>
+            <img id="reviewImage" src="{{ review.image.url }}">
+        </article>
+    </section>
 {% endblock %}

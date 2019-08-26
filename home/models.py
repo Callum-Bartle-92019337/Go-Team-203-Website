@@ -9,8 +9,6 @@ from django.utils import timezone
 
 log = logging.getLogger(__name__)
 
-# log failed login and user name to identify brute force attacks
-
 
 @receiver(user_login_failed)
 def user_login_failed_callback(sender, credentials, **kwargs):
@@ -20,7 +18,6 @@ def user_login_failed_callback(sender, credentials, **kwargs):
 
 
 class Review(models.Model):
-
     TYPE_CHOICES = (
         ('Food', 'Food'),
         ('Activities', 'Activities'),
@@ -32,7 +29,7 @@ class Review(models.Model):
     content = models.CharField(max_length=4096)
     poster = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
-    posted = models.CharField(max_length=10, default=timezone.now)
+    posted = models.CharField(max_length=16, default=timezone.now().date())
     image = models.ImageField(upload_to='review_Images/')
 
     readonly_fields = ('posted', 'poster')

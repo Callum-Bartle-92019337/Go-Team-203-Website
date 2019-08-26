@@ -1,30 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<section class="about">
-  <article>
-    <h2>Culture Master Privacy Policy</h2>
-    <p>
-      We collect personal information from you, including information about your:
-      <ul>
-        <li>name</li>
-        <li>contact information</li>
-        <li>location</li>
-      </ul>
-    </p>
+    <section class="about">
+        <article>
+            <h2>Culture Master Privacy Policy</h2>
+            <p>
+                We collect personal information from you, including information about your:
+            <ul>
+                <li>name</li>
+                <li>contact information</li>
+                <li>location</li>
+            </ul>
+            </p>
 
-    <p>
-      We collect your personal information in order to:
-      <ul>
-        <li>Improve your use of our application</li>
-      </ul>
-    </p>
-    Providing some information is optional. If you choose not to enter some of the requested information, we'll unable to provide the use of our app developer functions.
-    <p>
-      You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to
-      have it corrected, please <a href="{% url 'contact' %}">contact us</a>.
-    </p>
-    <a id="BackButton"></a>
-  </article>
-</section>
+            <p>
+                We collect your personal information in order to:
+            <ul>
+                <li>Improve your use of our application</li>
+            </ul>
+            </p>
+            Providing some information is optional. If you choose not to enter some of the requested information, we'll
+            unable to provide the use of our app developer functions.
+            <p>
+                You have the right to ask for a copy of any personal information we hold about you, and to ask for it to
+                be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to
+                have it corrected, please <a href="{% url 'contact' %}">contact us</a>.
+            </p>
+            <a id="BackButton"></a>
+        </article>
+    </section>
 {% endblock %}
