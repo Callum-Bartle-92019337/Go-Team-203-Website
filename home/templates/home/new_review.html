@@ -4,24 +4,24 @@
 
 <section class="about">
   <article>
-{% if user.is_authenticated %}
-      <h2>Post a new Review</h2>
+    {% if user.is_authenticated %}
+    <h2>Post a new Review</h2>
 
-      <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% for field in form %}
-          <p>
-            {{ field.label_tag }}<br>
-            {{ field }}
-            {% if field.help_text %}
-            {% endif %}
-            {% for error in field.errors %}
-              <p style="color: red">{{ error }}</p>
-            {% endfor %}
-          </p>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+        {% endif %}
+        {% for error in field.errors %}
+        <p style="color: red">{{ error }}</p>
         {% endfor %}
-        <button class="btn" type="submit">Post Review</button>
-      </form>
+      </p>
+      {% endfor %}
+      <button class="btn" type="submit">Post Review</button>
+    </form>
     {% else %}
     <p><a class="btn" href="{% url 'login'%}?next={{request.path}}">Login</a> to post a review</p>
     {% endif %}

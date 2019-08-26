@@ -10,19 +10,17 @@
         {% if review_list %}
         <ul>
           {% for i in review_list %}
-            {% if i.poster.username|capfirst == request.user|capfirst %}
-
+          {% if i.poster.username|capfirst == request.user|capfirst %}
 
           <article class="reviewArt">
-             <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
+            <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
             <h2>{{ i.title|capfirst }}</h2>
             <p>{{ i.content }}</p>
             <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
             <p class="poster">Posted by <strong>{{i.poster}}</strong></p>
           </article>
 
-
-            {% endif %}
+          {% endif %}
           {% endfor %}
           <br>
         </ul>

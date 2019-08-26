@@ -15,3 +15,4 @@
 [26/Aug/2019 12:56:37] WARNING [home.views:59] Testing Logged out
 [26/Aug/2019 12:57:05] WARNING [home.models:16] login failed for: Travelbub1234
 [26/Aug/2019 12:57:19] WARNING [home.models:16] login failed for: Travelbub123
+[27/Aug/2019 07:58:48] WARNING [home.views:59] TravelBub123 Logged out

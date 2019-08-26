@@ -8,12 +8,12 @@
     <div class="map">
       <div id="mapp">
         {% if review_list %}
-          {% for i in review_list %}
-            {% if i.type == 'Accommodation' %}
+        {% for i in review_list %}
+        {% if i.type == 'Accommodation' %}
 
         <ul>
           <article class="reviewArt">
-             <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
+            <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
             <h2>{{ i.title|capfirst }}</h2>
             <p>{{ i.content }}</p>
             <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
@@ -21,9 +21,9 @@
           </article>
         </ul>
 
-            {% endif %}
-          {% endfor %}
-          <br>
+        {% endif %}
+        {% endfor %}
+        <br>
         {% else %}
         <p>There are no reviews to display.</p>
         {% endif %}

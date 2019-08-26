@@ -41,12 +41,12 @@
           <li><a title="Reviews" href="{% url 'reviews_list_strd' %}" aria-haspopup="true">Reviews</a>
             <ul>
               <li><a title="View all" href="{% url 'reviews_list_strd' %}">View all</a></li>
-              <li><a title="Food" href="{% url 'reviews_list_food' %}">Food</a></li>
               <li><a title="Accommodation" href="{% url 'reviews_list_accommodation' %}">Accommodation</a></li>
+              <li><a title="Food" href="{% url 'reviews_list_food' %}">Food</a></li>
               <li><a title="Activities" href="{% url 'reviews_list_activities' %}">Activities</a></li>
               <li><a title="Post New" href="{% url 'review_new' %}">Post New</a></li>
               {% if user.is_authenticated %}
-                 <li><a title="Your Reviews" href="{% url 'reviews_list_auth' %}">Your Reviews</a></li>
+              <li><a title="Your Reviews" href="{% url 'reviews_list_auth' %}">Your Reviews</a></li>
               {% endif %}
 
             </ul>
@@ -55,11 +55,11 @@
           </li>
           <li><a title="Contact Us" href="{% url 'contact' %}">Contact Us</a></li>
           {% if user.is_authenticated %}
-             <li>
-             <a href="{% url 'logged_out_user'%}?next={{request.path}}">User: {{ user.get_username }} - Logout</a></li>
-           {% else %}
-             <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-           {% endif %}
+          <li>
+            <a href="{% url 'logged_out_user'%}?next={{request.path}}">User: {{ user.get_username }} - Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+          {% endif %}
         </ul>
       </nav>
 

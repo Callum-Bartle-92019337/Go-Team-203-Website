@@ -356,8 +356,8 @@ section.Phase blockquote p.credit::before {
 /* Navagation ===============================================================*/
 
 nav {
-  border: 1px solid #ffe5c1;
-  background-color: rgba(155, 143, 113, .66);
+  border: 1px solid #d7c0a1;
+  background-color: rgba(155, 143, 113, 0.9);
   position: fixed;
   top: 0;
   padding: 20px 0 0 0;
@@ -395,7 +395,7 @@ nav ul {
 }
 
 nav ul li:hover {
-    background-color: rgba(255, 255, 255, .2);
+    background-color: rgba(168, 154, 135, 0.5);
 }
 
 nav ul li:hover>ul {

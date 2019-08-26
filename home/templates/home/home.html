@@ -4,10 +4,9 @@
 <section class="main">
 
   <aside>
-    <div class="content trending">
-      <h3><a class="btn" href="{% url 'reviews_list_activities' %}">What To Do</a></h3>
-      <p>Check out reviews on places to see and do.</p>
-
+    <div class="content tools">
+      <h3><a class="btn" href="{% url 'reviews_list_accommodation' %}">Where to Stay</a></h3>
+      <p>Not sure where to stay look over a couple of reviews.</p>
     </div>
   </aside>
 
@@ -15,44 +14,39 @@
     <div class="content find">
       <h3><a class="btn" href="{% url 'reviews_list_food' %}">Where to Eat</a></h3>
       <p>Looking for a place to eat tonight? have a look at some reviews.</p>
-
     </div>
   </aside>
 
   <aside>
-    <div class="content tools">
-      <h3><a class="btn" href="{% url 'reviews_list_accommodation' %}">Where to Stay</a></h3>
-      <p>Not sure where to stay look over a couple of reviews.</p>
-
+    <div class="content trending">
+      <h3><a class="btn" href="{% url 'reviews_list_activities' %}">What To Do</a></h3>
+      <p>Check out reviews on places to see and do.</p>
     </div>
   </aside>
-
 </section>
 
 <section class="atmo">
   <article>
-      {% if review_list %}
-          {% for i in review_list %}
-     <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
+    {% if review_list %}
+    {% for i in review_list %}
+    <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
     <h2>{{ i.title|capfirst }}</h2>
     <p>{{ i.content }}</p>
     <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
     <p class="poster">Posted by <strong>{{i.poster}}</strong></p>
-          {% endfor %}
-        {% else %}
-        <p>There are no reviews to display.</p>
-        {% endif %}
+    {% endfor %}
+    {% else %}
+    <p>There are no reviews to display.</p>
+    {% endif %}
   </article>
 </section>
 
 <section class="Phase">
-
   <aside>
     <div class="content">
-        <img class="imgg" alt="Phase 2" src="{% static 'images/Okinawa_Place_to_Stay.png' %}" />
+      <img class="imgg" alt="Phase 2" src="{% static 'images/Okinawa_Place_to_Stay.png' %}" />
       <h4>Places to stay in Okinawa</h4>
       <p>Content comming soon!</p>
-
     </div>
   </aside>
 
@@ -61,7 +55,6 @@
       <img class="imgg" alt="Phase 3" src="{% static 'images/Yummy_Food_From_Osaka.png' %}">
       <h4>Yummy Food From Osaka</h4>
       <p>Content comming soon!</p>
-
     </div>
   </aside>
 
@@ -69,6 +62,5 @@
     <p class="quote">Wanting to find out about Japan? Why not {{ companyName }}!</p>
     <p class="credit"><strong>Ron Otterman</strong><br><em>News Ancor at Weasel News</em></p>
   </blockquote>
-
 </section>
 {% endblock %}
