@@ -29,7 +29,7 @@ class Review(models.Model):
     type = models.CharField(choices=TYPE_CHOICES, max_length=30, default=2)
     content = models.CharField(max_length=4096)
     poster = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
-    posted = models.CharField(max_length=150, default=timezone.now)
+    posted = models.CharField(max_length=10, default=timezone.now)
     image = models.ImageField(upload_to='review_Images/')
 
     readonly_fields=('posted', 'poster')
