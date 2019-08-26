@@ -55,14 +55,6 @@ def termsOfService(request):
     }
     return render(request, 'home/termsOfService.html', meta)
 
-
-def theMaking(request):
-    meta = {
-        'title': 'The Making',
-        'description': companyName +' information on the making of the app and how it was coded'
-    }
-    return render(request, 'home/theMaking.html', meta)
-
 def logout(request):
     log.warning(request.user.username + ' Logged out')
     django_logout(request)

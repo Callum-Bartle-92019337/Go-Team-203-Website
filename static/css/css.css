@@ -196,9 +196,20 @@ section.atmo, section.about {
   color: #ffe5c1
 }
 
+section.atmo article .imageNew{
+  float: left;
+  padding-right: 20px;
+  max-height: 220px;
+}
+
+section.atmo article .poster{
+  padding-top: 20px;
+}
+
 section.atmo article {
-  padding: 0 20px 0 515px;
-  background: url(../images/Tokyo1.jpg) no-repeat 0 5px;
+  padding: 0 20px 0 0px;
+  /*display: inline;*/
+  /*background: url(../images/Tokyo1.jpg) no-repeat 0 5px;*/
   min-height: 220px
 }
 
@@ -540,8 +551,8 @@ label[for=tandcagree] {
   }
   /* Section - atmo */
   section.atmo article {
-    padding-left: 400px;
-    background-size: 375px auto;
+    padding-left: 0px;
+    /*background-size: 375px auto;*/
   }
 }
 

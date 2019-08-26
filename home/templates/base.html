@@ -26,7 +26,7 @@
       <header>
         <div>
           <div class="hero">
-            <h1>Culture Master</h1><a id="titleButton" title="Get Started" href="{% url 'reviews_list_strd' %}">Get Started<span>Today</span></a>
+            <h1>Culture Master</h1><a id="titleButton" title="Get Started" href="{% url 'reviews_list_strd' %}">Get Started <span>Today</span></a>
           </div>
         </div>
       </header>
@@ -48,11 +48,7 @@
 
             </ul>
           </li>
-          <li><a title="About Us" href="{% url 'history' %}" aria-haspopup="true">About Us</a>
-            <ul>
-              <li><a title="History" href="{% url 'history' %}">History</a></li>
-              <li><a title="The making" href="{% url 'theMaking' %}">The making</a></li>
-            </ul>
+          <li><a title="About Us" href="{% url 'history' %}">About Us</a>
           </li>
           <li><a title="Contact Us" href="{% url 'contact' %}">Contact Us</a></li>
           {% if user.is_authenticated %}

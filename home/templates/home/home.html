@@ -33,11 +33,11 @@
   <article>
       {% if review_list %}
           {% for i in review_list %}
+     <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
     <h2>{{ i.title|capfirst }}</h2>
     <p>{{ i.content }}</p>
     <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
-              <br><br>
-    <p>Posted by <strong>{{i.poster}}</strong></p>
+    <p class="poster">Posted by <strong>{{i.poster}}</strong></p>
           {% endfor %}
         {% else %}
         <p>There are no reviews to display.</p>
