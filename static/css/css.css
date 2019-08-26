@@ -10,6 +10,11 @@ body, input, textarea {
   padding: 0;
 }
 
+input, select, textarea {
+  color: #000000;
+  background-color: #EBD8B7;
+}
+
 html {
   background-color: #A89A87
 }
@@ -70,8 +75,8 @@ a:visited {
   background-color: rgba(0, 0, 0, 0);
 }
 
-button {
-  background-color: rgba(0, 0, 0, 0);
+#titleButton{
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -196,14 +201,20 @@ section.atmo, section.about {
   color: #ffe5c1
 }
 
-section.atmo article .imageNew{
+.imageNew{
   float: left;
   padding-right: 20px;
-  max-height: 220px;
+  height: 240px;
+  width: 300px;
 }
 
-section.atmo article .poster{
+.poster{
   padding-top: 20px;
+}
+.reviewArt::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 section.atmo article {
@@ -345,6 +356,7 @@ section.Phase blockquote p.credit::before {
 /* Navagation ===============================================================*/
 
 nav {
+  border: 1px solid #ffe5c1;
   background-color: rgba(155, 143, 113, .66);
   position: fixed;
   top: 0;
@@ -383,7 +395,7 @@ nav ul {
 }
 
 nav ul li:hover {
-  background-color: #6d5236;
+    background-color: rgba(255, 255, 255, .2);
 }
 
 nav ul li:hover>ul {
@@ -404,13 +416,13 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-  background-color: #6d5236;
+    background-color: rgba(255, 255, 255, .2);
 }
 
 nav ul ul {
   position: absolute;
   top: 100%;
-  background-color: #6d5236;
+  background-color: rgba(155, 143, 113, .66);
   display: none;
 }
 
@@ -497,15 +509,10 @@ label, .label {
   width: 100px;
 }
 
-
-input, select, textarea {
-  color: #000000;
-  background-color: #EBD8B7;
-}
-
 .error {
-  color: #FF5C00;
-  font-size: x-small;
+padding-left: 6px;
+  color: #008AA5;
+  font-size: small;
 }
 
 .breakBefore::before {

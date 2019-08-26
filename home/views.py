@@ -101,6 +101,24 @@ class ReviewsListViewStandard(generic.ListView):
     paginate_by = 10
 
 
+class ReviewsListViewFood(generic.ListView):
+    model = Review
+    template_name = 'home/reviews_list_food.html'
+    paginate_by = 10
+
+
+class ReviewsListViewActivities(generic.ListView):
+    model = Review
+    template_name = 'home/reviews_list_activites.html'
+    paginate_by = 10
+
+
+class ReviewsListViewAccommodation(generic.ListView):
+    model = Review
+    template_name = 'home/reviews_list_accommodation.html'
+    paginate_by = 10
+
+
 class ReviewsListViewAuthent(generic.ListView):
     model = Review
     template_name = 'home/reviews_list_authenticated.html'

@@ -25,9 +25,9 @@ if (BACKBTN) {
 const TITLEBUTTON = document.querySelector('#titleButton');
 if (TITLEBUTTON) {
   TITLEBUTTON.addEventListener("mouseover", function () {
-    TITLEBUTTON.style.backgroundColor = "rgba(255,71,70,0.41)"
+    TITLEBUTTON.style.backgroundColor = "rgba(200,71,70,0.41)"
   });
   TITLEBUTTON.addEventListener("mouseout", function () {
-    TITLEBUTTON.style.backgroundColor = "rgba(0, 0, 0, 0)"
+    TITLEBUTTON.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
   });
 }

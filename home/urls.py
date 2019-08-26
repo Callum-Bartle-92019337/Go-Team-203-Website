@@ -13,5 +13,8 @@ urlpatterns = [
     path('review/<int:pk>', views.ReviewDetailView.as_view(), name='review_detail'),
     path('reviews/', views.ReviewsListViewStandard.as_view(), name='reviews_list_strd'),
     path('myreviews/', views.ReviewsListViewAuthent.as_view(), name='reviews_list_auth'),
+    path('reviews/food', views.ReviewsListViewFood.as_view(), name='reviews_list_food'),
+    path('reviews/activities', views.ReviewsListViewActivities.as_view(), name='reviews_list_activities'),
+    path('reviews/accommodation', views.ReviewsListViewAccommodation.as_view(), name='reviews_list_accommodation'),
 
 ]
