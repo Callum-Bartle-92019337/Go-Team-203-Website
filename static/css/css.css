@@ -389,7 +389,7 @@ nav ul {
 }
 
 nav ul li:hover {
-  background-color: #6d5236;
+    background-color: rgba(255, 255, 255, .2);
 }
 
 nav ul li:hover>ul {
@@ -410,13 +410,13 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-  background-color: #6d5236;
+    background-color: rgba(255, 255, 255, .2);
 }
 
 nav ul ul {
   position: absolute;
   top: 100%;
-  background-color: #6d5236;
+  background-color: rgba(155, 143, 113, .66);
   display: none;
 }
 
