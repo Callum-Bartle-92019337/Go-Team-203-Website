@@ -89,7 +89,7 @@ header div.hero a.btn {
 }
 
 #mapp {
-  height: 530px;
+  /*height: 530px;*/
   display: block;
   margin: auto;
 }
@@ -629,9 +629,9 @@ label[for=tandcagree] {
 }
 
 @media screen and (max-width: 625px) {
-  #mapp {
-    height: 600px;
-  }
+  /*#mapp {*/
+  /*  height: 600px;*/
+  /*}*/
   .check {
     display: block;
   }
@@ -781,9 +781,9 @@ label[for=tandcagree] {
 }
 
 @media screen and (max-width: 425px) {
-  #mapp {
-    height: 400px;
-  }
+  /*#mapp {*/
+  /*  height: 400px;*/
+  /*}*/
   /* Header */
   header {
     height: 110px;

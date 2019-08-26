@@ -99,7 +99,7 @@ function checkForm() {
     : errorReset( EMAIL_MSG );
 
   //Gender
-  !sex_male && !sex_female
+  !sex_male && !sex_female && !sex_other
     ? errorPass( SEX_MSG, GENDER_ERROR )
     : errorReset( SEX_MSG );
 

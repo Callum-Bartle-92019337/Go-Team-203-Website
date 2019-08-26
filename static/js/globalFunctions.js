@@ -1,13 +1,13 @@
 const BACKBTN = document.getElementById('BackButton');
-const ARTICLE = document.querySelector('.atmo article');
+// const ARTICLE = document.querySelector('.atmo article');
 
 function backButton() {
   history.back();
 };
 
-function mapButton() {
-  window.location = 'reviews/';
-};
+// function mapButton() {
+//   window.location = 'reviews/';
+// };
 
 function success() {
   document.querySelector('form').innerHTML = "Thankyou<br>";
@@ -19,9 +19,9 @@ if (BACKBTN) {
   BACKBTN.textContent = "< Back";
   BACKBTN.addEventListener('click', backButton);
 };
-if (ARTICLE) {
-  ARTICLE.addEventListener('click', mapButton);
-}
+// if (ARTICLE) {
+//   ARTICLE.addEventListener('click', mapButton);
+// }
 const TITLEBUTTON = document.querySelector('#titleButton');
 if (TITLEBUTTON) {
   TITLEBUTTON.addEventListener("mouseover", function () {
