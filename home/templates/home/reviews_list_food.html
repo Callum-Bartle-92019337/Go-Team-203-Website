@@ -8,11 +8,10 @@
     <div class="map">
       <div id="mapp">
         {% if review_list %}
-        <ul>
           {% for i in review_list %}
             {% if i.type == 'Food' %}
 
-
+        <ul>
           <article class="reviewArt">
              <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
             <h2>{{ i.title|capfirst }}</h2>
@@ -20,12 +19,11 @@
             <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
             <p class="poster">Posted by <strong>{{i.poster}}</strong></p>
           </article>
-
-
+        </ul>
+		
             {% endif %}
           {% endfor %}
           <br>
-        </ul>
         {% else %}
         <p>There are no reviews to display.</p>
         {% endif %}
