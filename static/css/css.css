@@ -196,14 +196,20 @@ section.atmo, section.about {
   color: #ffe5c1
 }
 
-section.atmo article .imageNew{
+.imageNew{
   float: left;
   padding-right: 20px;
-  max-height: 220px;
+  height: 240px;
+  width: 300px;
 }
 
-section.atmo article .poster{
+.poster{
   padding-top: 20px;
+}
+.reviewArt::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 section.atmo article {

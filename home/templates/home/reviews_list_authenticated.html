@@ -11,11 +11,17 @@
         <ul>
           {% for i in review_list %}
             {% if i.poster.username|capfirst == request.user|capfirst %}
-          <div class="tourname">
-            <a href="{% url 'review_detail' i.id %}">
-              <p><strong>{{ i.title|capfirst }}</strong> - <strong>{{i.poster}}</strong></p>
-            </a>
-          </div>
+
+
+          <article class="reviewArt">
+             <img class="imageNew" id="reviewImage" src="{{i.image.url}}">
+            <h2>{{ i.title|capfirst }}</h2>
+            <p>{{ i.content }}</p>
+            <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read more</a>
+            <p class="poster">Posted by <strong>{{i.poster}}</strong></p>
+          </article>
+
+
             {% endif %}
           {% endfor %}
           <br>
