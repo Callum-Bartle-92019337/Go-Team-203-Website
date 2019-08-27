@@ -129,35 +129,80 @@ class NewReviewView(generic.FormView):
 # The view that displays a full list of all the reviews using Django list views
 class ReviewsListViewStandard(generic.ListView):
     model = Review
-    template_name = 'home/reviews_list_standard.html'
+    template_name = 'home/reviews_list.html'
     paginate_by = 10
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['review_title'] = "List of Reviews"
+        return context
 
 
 # The view that displays a list of reviews filtering only the food reviews
 class ReviewsListViewFood(generic.ListView):
-    model = Review
-    template_name = 'home/reviews_list_food.html'
+
+    def get_queryset(self):
+        queryset = Review.objects.filter(type='Food')
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['review_title'] = "List of Food Reviews"
+        return context
+
+    template_name = 'home/reviews_list.html'
     paginate_by = 10
 
 
 # The view that displays a list of reviews filtering only the activitie reviews
 class ReviewsListViewActivities(generic.ListView):
-    model = Review
-    template_name = 'home/reviews_list_activites.html'
+
+    def get_queryset(self):
+        queryset = Review.objects.filter(type='Activities')
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['review_title'] = "List of Activity Reviews"
+        return context
+
+    template_name = 'home/reviews_list.html'
     paginate_by = 10
 
 
 # The view that displays a list of reviews filtering only the accommodation reviews
 class ReviewsListViewAccommodation(generic.ListView):
-    model = Review
-    template_name = 'home/reviews_list_accommodation.html'
+
+    def get_queryset(self):
+        queryset = Review.objects.filter(type='Accommodation')
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['review_title'] = "List of Accommodation Reviews"
+        return context
+
+    template_name = 'home/reviews_list.html'
     paginate_by = 10
 
 
 # The view that displays a list of reviews filtering only the current users reviews
 class ReviewsListViewAuthent(generic.ListView):
-    model = Review
-    template_name = 'home/reviews_list_authenticated.html'
+
+    def get_queryset(self):
+        if self.request.user.is_authenticated:
+            queryset = Review.objects.filter(poster=self.request.user)
+        else:
+            queryset = Review.objects.none()
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.request.user.username
+        context['review_title'] = "Reviews by "+user.capitalize()
+        return context
+
+    template_name = 'home/reviews_list.html'
     paginate_by = 10
 
 
