@@ -4,28 +4,28 @@
     <section class="main">
 
         <aside>
-            <div class="content tools">
+            <div class="content accommodation">
                 <h3><a class="btn" href="{% url 'reviews_list_accommodation' %}">Where to Stay</a></h3>
                 <p>Not sure where to stay look over a couple of reviews.</p>
             </div>
         </aside>
 
         <aside>
-            <div class="content find">
+            <div class="content food">
                 <h3><a class="btn" href="{% url 'reviews_list_food' %}">Where to Eat</a></h3>
                 <p>Looking for a place to eat tonight? have a look at some reviews.</p>
             </div>
         </aside>
 
         <aside>
-            <div class="content trending">
-                <h3><a class="btn" href="{% url 'reviews_list_activities' %}">What To Do</a></h3>
+            <div class="content activities">
+                <h3><a class="btn" href="{% url 'reviews_list_activities' %}">What to Do</a></h3>
                 <p>Check out reviews on places to see and do.</p>
             </div>
         </aside>
     </section>
 
-    <section class="atmo">
+    <section class="recentReviewClass">
         <article>
             {% if review_list %}
                 {% for i in review_list %}

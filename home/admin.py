@@ -2,5 +2,5 @@ from django.contrib import admin
 
 from .models import Review
 
-# Register your models here.
+# Register the review model.
 admin.site.register(Review)

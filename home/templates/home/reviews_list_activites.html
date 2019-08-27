@@ -5,21 +5,21 @@
         <article>
             <a id="BackButton"></a>
             <h2 class="breakBefore">Activity Reviews</h2>
-            <div class="map">
-                <div id="mapp">
+            <div class="boarderClass">
+                <div id="boarderContent">
                     {% if review_list %}
                         {% for i in review_list %}
                             {% if i.type == 'Activities' %}
 
                                 <ul>
-                                    <article class="reviewArt">
+                                    <div class="reviewArt">
                                         <img class="imageNew" id="reviewImage" src="{{ i.image.url }}">
                                         <h2>{{ i.title|capfirst }}</h2>
                                         <p>{{ i.content|truncatechars:255 }}</p>
                                         <a class="btn" title="Launching" href="{% url 'review_detail' i.id %}">Read
                                             more</a>
                                         <p class="poster">Posted by <strong>{{ i.poster }}</strong></p>
-                                    </article>
+                                    </div>
                                 </ul>
 
                             {% endif %}

@@ -7,13 +7,19 @@ from django.views import generic
 from .models import Review
 from .forms import SignUpForm, ReviewNewForm
 
+# Registers the log file
 log = logging.getLogger(__name__)
 
+# Registers the company name to pass to each page later
 companyName = "Culture Master"
 
 
+# Home page view
 def home(request):
+    # Gets the most recent review to pass to the homepage
     queryset1 = Review.objects.order_by('-posted')[:1]
+
+    # Stores the page title and description to pass to the template
     meta = {
         'title': 'Home',
         'companyName': companyName,
@@ -24,50 +30,70 @@ def home(request):
     return render(request, 'home/home.html', meta)
 
 
+# About view
 def history(request):
     meta = {
         'title': 'About',
         'description': companyName + ' a short history of the app and the prosess that created it'
     }
-    return render(request, 'home/aboutHistory.html', meta)
+    return render(request, 'home/about_us.html', meta)
 
 
+# Contact view
 def contact(request):
     meta = {
         'title': 'Contact Us',
         'description': companyName + ' contact page, the form used to submit reviews and bug reports'
     }
-    return render(request, 'home/contactUs.html', meta)
+    return render(request, 'home/contact_us.html', meta)
 
 
+# Privacy statement view
 def privacyPolicy(request):
     meta = {
         'title': 'Privacy Policy',
         'description': companyName + ' privacy policy page updated 21st august 2018'
     }
-    return render(request, 'home/privacyPolicy.html', meta)
+    return render(request, 'home/privacy_policy.html', meta)
 
 
+# Terms of service view
 def termsOfService(request):
     meta = {
         'title': 'Terms of Service',
         'description': companyName + ' terms of service page updated august 21st 2018'
     }
-    return render(request, 'home/termsOfService.html', meta)
+    return render(request, 'home/terms_of_service.html', meta)
 
 
+# Logout view
 def logout(request):
+    meta = {
+        'title': 'Logout',
+        'description': companyName + ' Logout'
+    }
     log.warning(request.user.username + ' Logged out')
     django_logout(request)
-    return render(request, 'registration/logged_out.html')
+    return render(request, 'registration/logged_out.html', meta)
 
 
+# Password reset view
 def reset_request(request):
+    meta = {
+        'title': 'Password Reset',
+        'description': companyName + ' Password Reset'
+    }
     log.warning('Password change request made')
-    return render(request, 'registration/password_reset_form.html')
+    return render(request, 'registration/password_reset_form.html', meta)
 
-
+# Signup view / Create user
 def signup(request):
+    meta = {
+        'title': 'Signup',
+        'description': companyName + ' Signup'
+    }
+
+    # if we get a post request with the form save the user as a new user
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -79,9 +105,9 @@ def signup(request):
             return redirect('home')
     else:
         form = SignUpForm()
-    return render(request, 'registration/signup.html', {'form': form})
+    return render(request, 'registration/signup.html', {'form': form, 'meta': meta})
 
-
+# The view where you post a new review if loged in
 class NewReviewView(generic.FormView):
     template_name = 'home/new_review.html'
     form_class = ReviewNewForm
@@ -89,6 +115,8 @@ class NewReviewView(generic.FormView):
 
     def form_valid(self, form):
 
+        # If the review form is valid save it to the database
+        # Form is checked using Djangos form view
         if self.request.method == 'POST':
             if form.is_valid():
                 form.instance.poster = self.request.user
@@ -98,37 +126,42 @@ class NewReviewView(generic.FormView):
             form = ReviewNewForm()
         return super().form_valid(form)
 
-
+# The view that displays a full list of all the reviews using Django list views
 class ReviewsListViewStandard(generic.ListView):
     model = Review
     template_name = 'home/reviews_list_standard.html'
     paginate_by = 10
 
 
+# The view that displays a list of reviews filtering only the food reviews
 class ReviewsListViewFood(generic.ListView):
     model = Review
     template_name = 'home/reviews_list_food.html'
     paginate_by = 10
 
 
+# The view that displays a list of reviews filtering only the activitie reviews
 class ReviewsListViewActivities(generic.ListView):
     model = Review
     template_name = 'home/reviews_list_activites.html'
     paginate_by = 10
 
 
+# The view that displays a list of reviews filtering only the accommodation reviews
 class ReviewsListViewAccommodation(generic.ListView):
     model = Review
     template_name = 'home/reviews_list_accommodation.html'
     paginate_by = 10
 
 
+# The view that displays a list of reviews filtering only the current users reviews
 class ReviewsListViewAuthent(generic.ListView):
     model = Review
     template_name = 'home/reviews_list_authenticated.html'
     paginate_by = 10
 
 
+# The view that displays a single review in full
 class ReviewDetailView(generic.DetailView):
     model = Review
     template_name = 'home/review_details.html'

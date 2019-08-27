@@ -6,6 +6,7 @@ from django.forms import Textarea
 from .models import Review
 
 
+# the form for signup
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(
         max_length=30, required=False, help_text='Optional.')
@@ -22,6 +23,7 @@ class SignUpForm(UserCreationForm):
                   'email', 'phone', 'password1', 'password2',)
 
 
+# the new review form
 class ReviewNewForm(forms.ModelForm):
     class Meta:
         model = Review

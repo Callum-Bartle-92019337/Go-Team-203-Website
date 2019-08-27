@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+# adds the main url patterns to the urls so you can access each view
 urlpatterns = [
     path('', views.home, name='home'),
     path('signup/', views.signup, name='signup'),
