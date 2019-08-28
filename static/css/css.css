@@ -90,6 +90,9 @@ a:visited {
 header div.hero a.btn {
     color: #ffe5c1;
 }
+#reviewImage{
+    max-width: 100%;
+}
 
 /* Header ===================================================================*/
 header {
